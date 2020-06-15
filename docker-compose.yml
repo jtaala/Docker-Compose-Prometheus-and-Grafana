@@ -4,6 +4,8 @@ services:
     image: prom/prometheus
     container_name: prom
     restart: always
+    ports:
+      - 10090:9090
     environment:
       - config.file=/etc/prometheus/prometheus.yml
       - storage.tsdb.path=/prometheus
@@ -27,7 +29,7 @@ services:
     container_name: graf
     restart: always
     ports:
-      - 3000:3000
+      - 4000:3000
     volumes:
       - ./grafana.ini:/etc/grafana/grafana.ini
       - graf-data:/var/lib/grafana

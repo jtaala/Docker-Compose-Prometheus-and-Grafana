@@ -40,8 +40,21 @@ scrape_configs:
       module: [http_2xx]  # Look for a HTTP 200 response.
     static_configs:
       - targets:
-        - https://example.com
-        - https://startpage.com
+        - https://jaytaala.com
+        - https://bitwarden.jaytaala.com
+        - https://confluence.jaytaala.com
+        - https://chat.jaytaala.com
+        - https://crowd.jaytaala.com
+        - https://gitlab.jaytaala.com
+        - https://url.jaytaala.com
+        - https://opstoolkit.unswcanberraspace.com
+        - https://opstoolkit-dev.unswcanberraspace.com
+        - https://confluence.unswcanberraspace.com
+        - https://bitbucket.unswcanberraspace.com
+        - https://jira.unswcanberraspace.com
+        - https://crowd.unswcanberraspace.com
+        - https://rcode.unswcanberraspace.com
+        - https://survey.unswcanberraspace.com
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
