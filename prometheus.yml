@@ -34,13 +34,11 @@ scrape_configs:
     - targets: ['10.0.0.137:10091']
 
   - job_name: 'blackbox'
-    scrape_timeout: 20s
     metrics_path: /probe
     params:
       module: [http_2xx]  # Look for a HTTP 200 response.
     static_configs:
       - targets:
-        - https://jaytaala.com
         - https://bitwarden.jaytaala.com
         - https://confluence.jaytaala.com
         - https://chat.jaytaala.com
