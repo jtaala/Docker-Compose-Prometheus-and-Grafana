@@ -2,7 +2,6 @@ version: '3'
 services:
   prom:
     image: prom/prometheus
-    container_name: prom
     restart: always
     environment:
       - config.file=/etc/prometheus/prometheus.yml
@@ -15,7 +14,6 @@ services:
 
   bbexp:
     image: prom/blackbox-exporter
-    container_name: bbexp
     restart: always
     environment:
       - config.file="/config.yml"
@@ -24,7 +22,6 @@ services:
 
   graf:
     image: grafana/grafana
-    container_name: graf
     restart: always
     ports:
       - 3000:3000
